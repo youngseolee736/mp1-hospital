@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Request | Yonsei Dawoom Hospital</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="https://yshospital.net/en/images/logo.png" alt="Yonsei Dawoom Hospital" />
+          <span>
+            <strong>Yonsei Dawoom Hospital</strong>
+            <small>International Healthcare Center & Physical Therapy Center</small>
+          </span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="appointment.html">Appointment</a>
+          <a href="location.html">Location</a>
+          <a href="support.html">Military Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-shell">
+      <section class="page-intro">
+        <p class="eyebrow">Appointment request</p>
+        <h1>Submit a demo appointment request</h1>
+        <p>
+          This is a static demo form for the class project. No backend booking integration is required.
+        </p>
+      </section>
+
+      <section class="two-column-panel appointment-layout">
+        <article class="panel-card form-card">
+          <form id="appointment-form" class="appointment-form">
+            <label>
+              Full name
+              <input type="text" name="name" placeholder="Enter your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="name@example.com" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" placeholder="010-1234-5678" required />
+            </label>
+            <label>
+              Department
+              <select name="department" required>
+                <option value="">Select a service</option>
+                <option>Orthopedic care</option>
+                <option>Sports medicine</option>
+                <option>Rehabilitation</option>
+                <option>General medicine</option>
+              </select>
+            </label>
+            <label>
+              Preferred date
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              Notes
+              <textarea name="notes" rows="4" placeholder="Briefly explain your concern or question"></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Submit request</button>
+            <p id="form-status" class="status-note" aria-live="polite"></p>
+          </form>
+        </article>
+
+        <article class="panel-card info-card">
+          <h2>What happens next?</h2>
+          <ul class="check-list">
+            <li>Our team will review the request in the demo environment.</li>
+            <li>Staff will contact you with booking guidance and next steps.</li>
+            <li>Use the location and support pages for directions and assistance.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Yonsei Dawoom Hospital. International healthcare information for patient guidance.</p>
+        <p>105, Jungang-ro, Pyeongtaek-si, Gyeonggi-do, Korea 17897</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
