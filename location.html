@@ -6,7 +6,7 @@
     <title>Location | Yonsei Dawoom Hospital</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="location">
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html">
@@ -28,22 +28,29 @@
     </header>
 
     <main class="container page-shell">
-      <section class="page-intro">
-        <p class="eyebrow">Location</p>
-        <h1>Visit Yonsei Dawoom Hospital in Pyeongtaek</h1>
+      <section class="page-intro location-intro">
+        <p class="eyebrow">Location & visit information</p>
+        <h1>Plan your visit to Yonsei Dawoom Hospital</h1>
         <p>
-          The reference site lists the hospital address, parking guidance, and contact information for
-          international and local patients traveling by public transport.
+          Find the hospital address, arrival guidance, parking support, and contact details in one clear,
+          patient-friendly section.
         </p>
       </section>
 
       <section class="two-column-panel location-layout">
         <article class="panel-card map-card">
-          <h2>Map preview</h2>
-          <div class="map-box">Map placeholder for hospital location</div>
+          <div class="section-label-row">
+            <p class="eyebrow">Hospital map</p>
+            <a class="text-link" href="appointment.html">Need help booking? →</a>
+          </div>
+          <div class="map-box">Map preview for hospital access and parking</div>
         </article>
         <article class="panel-card contact-card">
-          <h2>Contact details</h2>
+          <div class="section-label-row">
+            <p class="eyebrow">Contact details</p>
+            <span class="mini-pill">Open for visits</span>
+          </div>
+          <h2>Visit and contact information</h2>
           <ul class="contact-list">
             <li><strong>Address:</strong> 105, Jungang-ro, Pyeongtaek-si, Gyeonggi-do, Korea 17897</li>
             <li><strong>Telephone:</strong> +82-31-651-1313</li>
@@ -53,8 +60,27 @@
         </article>
       </section>
 
+      <section class="location-summary-grid">
+        <article class="mini-card summary-card">
+          <p class="eyebrow">Arrival</p>
+          <h3>Easy station access</h3>
+          <p>Convenient public transport access from Pyeongtaek Station with simple bus connections.</p>
+        </article>
+        <article class="mini-card summary-card">
+          <p class="eyebrow">Parking</p>
+          <h3>Free parking support</h3>
+          <p>Outpatients receive up to 4 hours of free parking and inpatients receive 6 hours on admission and discharge days.</p>
+        </article>
+        <article class="mini-card summary-card">
+          <p class="eyebrow">Support</p>
+          <h3>International visitor guidance</h3>
+          <p>Clear contact details and care coordination options for international and local patients.</p>
+        </article>
+      </section>
+
       <section class="two-column-panel location-layout">
         <article class="panel-card">
+          <p class="eyebrow">Parking & arrival</p>
           <h2>Parking information</h2>
           <p>
             Visitors can use the hospital parking area for convenient access to the clinic. Outpatients are
@@ -67,13 +93,46 @@
           </p>
         </article>
         <article class="panel-card">
-          <h2>Visit guidance</h2>
+          <p class="eyebrow">Visit guidance</p>
+          <h2>How to prepare for your visit</h2>
           <ul class="check-list">
-            <li>Easy access from Pyeongtaek Station by regular bus</li>
-            <li>Parking support for outpatients and hospitalized patients</li>
-            <li>Clear contact details for international and local visitors</li>
+            <li>Take the regular bus route from Pyeongtaek Station to the hospital area</li>
+            <li>Use the parking area for a smoother arrival and check-in process</li>
+            <li>Contact the International Healthcare Center for additional parking or visitor questions</li>
           </ul>
         </article>
+      </section>
+
+      <section class="visual-section">
+        <div class="page-intro">
+          <p class="eyebrow">Map & parking visuals</p>
+          <h2>Visual access and arrival guidance</h2>
+          <p>
+            These visual references help patients understand the site layout and arrival information before visiting.
+          </p>
+        </div>
+          <section class="card-grid two-up">
+          <article class="support-visual-card panel-card">
+            <img src="https://yshospital.net/en/images/map.jpg" alt="Hospital location and parking map" />
+            <div>
+              <h2>Parking and access overview</h2>
+              <p>
+                Use this map view to understand the hospital location and plan your arrival with the parking
+                area in mind.
+              </p>
+            </div>
+          </article>
+          <article class="support-visual-card panel-card">
+            <img src="https://yshospital.net/en/images/map-2.jpg" alt="Additional hospital access and parking guidance" />
+            <div>
+              <h2>Arrival guidance</h2>
+              <p>
+                These visuals help visitors identify the route to the clinic and review the general parking
+                and access information before their visit.
+              </p>
+            </div>
+          </article>
+        </section>
       </section>
     </main>
 
