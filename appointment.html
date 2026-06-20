@@ -20,15 +20,16 @@
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
           <a href="doctors.html">Doctors</a>
+          <a href="support.html">International Support</a>
           <a href="appointment.html">Appointment</a>
           <a href="location.html">Location</a>
-          <a href="support.html">Military Support</a>
+
         </nav>
       </div>
     </header>
 
     <main class="container page-shell">
-      <section class="page-intro">
+      <section class="page-intro page-hero-intro">
         <p class="eyebrow">Appointment request</p>
         <h1>Request an appointment</h1>
         <p>
@@ -63,7 +64,7 @@
             </label>
             <label>
               Preferred date
-              <input type="date" name="date" required />
+              <input type="text" name="date" placeholder="MM/DD/YYYY" inputmode="numeric" pattern="\\d{2}/\\d{2}/\\d{4}" required />
             </label>
             <label>
               Notes
