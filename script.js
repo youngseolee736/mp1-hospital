@@ -17,54 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const naverMapElement = document.getElementById('naver-map');
-  if (naverMapElement && window.naver?.maps) {
-    const fallbackCenter = new naver.maps.LatLng(36.9917, 127.0888);
-    const hospitalAddress = '105, Jungang-ro, Pyeongtaek-si, Gyeonggi-do, Korea';
-    const map = new naver.maps.Map(naverMapElement, {
-      center: fallbackCenter,
-      zoom: 16,
-      minZoom: 12,
-      zoomControl: true,
-      zoomControlOptions: {
-        position: naver.maps.Position.TOP_RIGHT
-      }
-    });
-
-    const setHospitalMarker = (position) => {
-      const marker = new naver.maps.Marker({
-        position,
-        map,
-        title: 'Yonsei Dawoom Hospital'
-      });
-      const infoWindow = new naver.maps.InfoWindow({
-        content: '<div class="naver-map-info"><strong>Yonsei Dawoom Hospital</strong><br />105, Jungang-ro, Pyeongtaek-si</div>'
-      });
-
-      naver.maps.Event.addListener(marker, 'click', () => {
-        infoWindow.open(map, marker);
-      });
-
-      map.setCenter(position);
-      naverMapElement.classList.add('is-loaded');
-    };
-
-    if (naver.maps.Service?.geocode) {
-      naver.maps.Service.geocode({ query: hospitalAddress }, (statusCode, response) => {
-        const firstResult = response?.v2?.addresses?.[0];
-
-        if (statusCode === naver.maps.Service.Status.OK && firstResult) {
-          setHospitalMarker(new naver.maps.LatLng(Number(firstResult.y), Number(firstResult.x)));
-          return;
-        }
-
-        setHospitalMarker(fallbackCenter);
-      });
-    } else {
-      setHospitalMarker(fallbackCenter);
-    }
-  }
-
   const facilityGallery = document.querySelector('.facility-gallery');
   const facilityImage = document.querySelector('.facility-gallery-image');
   const facilityFloor = document.querySelector('.facility-gallery-floor');
