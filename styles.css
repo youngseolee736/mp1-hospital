@@ -1683,6 +1683,14 @@ h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); margin-top: 0; }
   line-height: 1.42;
 }
 
+.support-circle-card .support-note {
+  max-width: 11rem;
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
 .support-circle-actions {
   display: flex;
   flex-wrap: wrap;
