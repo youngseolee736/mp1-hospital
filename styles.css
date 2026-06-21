@@ -404,6 +404,104 @@ h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); margin-top: 0; }
   margin-top: 0.5rem;
 }
 
+.hospital-intro-band {
+  background:
+    linear-gradient(135deg, rgba(14, 143, 143, 0.08), transparent 34%),
+    #fff;
+}
+
+.hospital-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr);
+  gap: clamp(1.4rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.hospital-intro-copy h2 {
+  font-size: clamp(1.85rem, 3.7vw, 3.1rem);
+  line-height: 1.08;
+  margin-bottom: 0.75rem;
+}
+
+.hospital-intro-copy p {
+  color: var(--muted);
+}
+
+.hospital-intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.facility-gallery {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 42px 14px 42px 14px;
+  box-shadow: var(--shadow);
+}
+
+.facility-gallery-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.facility-gallery-caption {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: clamp(0.9rem, 2.4vw, 1.5rem);
+  align-items: center;
+  padding: clamp(1rem, 2.4vw, 1.45rem);
+}
+
+.facility-gallery-floor {
+  min-width: 5.3rem;
+  margin: 0;
+  color: rgba(24, 50, 70, 0.78);
+  font-size: clamp(2.4rem, 5.2vw, 4rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.facility-gallery-caption h3 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+}
+
+.facility-gallery-caption p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.facility-gallery-controls {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.facility-gallery-button {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  box-shadow: var(--shadow-soft);
+}
+
+.facility-gallery-button:hover,
+.facility-gallery-button:focus-visible {
+  background: var(--blue);
+  outline: none;
+}
+
 .cc-info-stack {
   display: grid;
   gap: 1.15rem;
@@ -446,6 +544,60 @@ h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); margin-top: 0; }
   background: #fff;
   border-color: rgba(27, 95, 156, 0.35);
   box-shadow: var(--shadow-soft);
+}
+
+.director-message {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(1.1rem, 3vw, 2rem);
+  align-items: center;
+  margin: 2rem auto;
+  padding: clamp(1rem, 2.6vw, 1.6rem);
+  border: 1px solid var(--border);
+  border-radius: 42px 14px 42px 14px;
+  background:
+    linear-gradient(135deg, rgba(14, 143, 143, 0.06), transparent 38%),
+    #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.director-message > img {
+  width: 100%;
+  max-width: 230px;
+  justify-self: center;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 32px 10px 32px 10px;
+  border: 1px solid rgba(27, 95, 156, 0.18);
+  background: linear-gradient(180deg, #eff6fc, #fff);
+  box-shadow: 0 12px 24px rgba(18, 49, 76, 0.10);
+}
+
+.director-message h2 {
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  line-height: 1.16;
+  max-width: 22ch;
+  margin-bottom: 0.65rem;
+}
+
+.director-message p {
+  color: var(--muted);
+}
+
+.director-signature {
+  display: grid;
+  gap: 0.1rem;
+  margin: 0.9rem 0 0;
+}
+
+.director-signature strong {
+  color: var(--text);
+}
+
+.director-signature span {
+  color: var(--muted);
+  font-size: 0.94rem;
 }
 
 .stat-card {
@@ -1575,6 +1727,7 @@ h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); margin-top: 0; }
   .hero-grid, .two-column-panel, .section-grid, .three-up, .two-up, .appointment-layout, .location-layout, .support-visual-card { grid-template-columns: 1fr; }
   .cc-hero-inner,
   .cc-feature-grid,
+  .hospital-intro-grid,
   .cc-info-panel { grid-template-columns: 1fr; }
   .cc-action-grid { grid-template-columns: 1fr; margin-top: -2.8rem; }
   .cc-hero { padding-bottom: 4.7rem; }
@@ -1602,6 +1755,11 @@ h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); margin-top: 0; }
   .support-photo-frame img { min-height: 260px; }
   .quick-action-grid { grid-template-columns: repeat(2, 1fr); }
   .location-summary-grid { grid-template-columns: 1fr; }
+  .facility-gallery-caption { grid-template-columns: 1fr auto; }
+  .facility-gallery-floor { min-width: 0; }
+  .facility-gallery-caption > div:not(.facility-gallery-controls) { grid-column: 1 / -1; }
+  .director-message { grid-template-columns: 1fr; }
+  .director-message > img { max-width: 180px; }
   .doctor-detail-panel { grid-template-columns: 1fr; width: 100%; }
   .doctor-detail-copy ul { grid-template-columns: 1fr; }
   .doctor-detail-panel img { max-height: 260px; }
